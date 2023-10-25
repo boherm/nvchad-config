@@ -31,6 +31,9 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
+    config = function()
+      require('nvim-treesitter.install').compilers = { 'clang++' }
+    end,
   },
 
   {
