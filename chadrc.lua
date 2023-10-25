@@ -13,10 +13,10 @@ M.ui = {
   nvdash = {
     load_on_startup = true,
     header = {
-      "    __   __        ___  __           ",
-      "   |__) /  \\ |__| |__  |__)  |\\/|    ",
-      "   |__) \\__/ |  | |___ |  \\  |  |    ",
-      "                                 1.0 "
+      "     __   __        ___  __            ",
+      "    |__) /  \\ |__| |__  |__)  |\\/|     ",
+      "    |__) \\__/ |  | |___ |  \\  |  |     ",
+      "                                  v1.0 "
     },
     buttons = {
       { "  Find File", "Spc f f", "Telescope find_files" },
@@ -50,8 +50,13 @@ vim.opt.colorcolumn = "121"
 vim.g.toggle_theme_icon = ""
 
 -- Neovide config
-vim.g.neovide_cursor_antialiasing = true
-vim.g.neovide_cursor_trail_size = 0.5
-vim.g.neovide_cursor_animation_length = 0.05
+if vim.g.neovide == true then
+  vim.g.neovide_cursor_antialiasing = true
+  vim.g.neovide_cursor_trail_size = 0.5
+  vim.g.neovide_cursor_animation_length = 0.05
+  vim.api.nvim_set_keymap("n", "<D-+>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>", { silent = true })
+  vim.api.nvim_set_keymap("n", "<D-_>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>", { silent = true })
+  vim.api.nvim_set_keymap("n", "<D-0>", ":lua vim.g.neovide_scale_factor = 1<CR>", { silent = true })
+end
 
 return M
