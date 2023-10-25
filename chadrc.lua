@@ -22,11 +22,11 @@ M.ui = {
   },
 
   statusline = {
-    theme = 'default',
+    theme = 'vscode_colored',
     overriden_modules = function(modules)
       table.insert(
         modules,
-        11,
+        14,
         (function()
           return "%#white# %{strftime('%H:%M')} "
         end)()
