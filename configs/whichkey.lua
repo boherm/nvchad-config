@@ -11,30 +11,6 @@ function _LAZYGIT_TOGGLE()
   lazygit:toggle()
 end
 
-function _NODE_TOGGLE()
-  local Terminal = require("toggleterm.terminal").Terminal
-  local node = Terminal:new { cmd = "node", hidden = true }
-  node:toggle()
-end
-
-function _NCDU_TOGGLE()
-  local Terminal = require("toggleterm.terminal").Terminal
-  local ncdu = Terminal:new { cmd = "ncdu", hidden = true }
-  ncdu:toggle()
-end
-
-function _HTOP_TOGGLE()
-  local Terminal = require("toggleterm.terminal").Terminal
-  local htop = Terminal:new { cmd = "htop", hidden = true }
-  htop:toggle()
-end
-
-function _PYTHON_TOGGLE()
-  local Terminal = require("toggleterm.terminal").Terminal
-  local python = Terminal:new { cmd = "python", hidden = true }
-  python:toggle()
-end
-
 local setup = {
   icons = {
     breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
@@ -221,10 +197,7 @@ local mappings = {
 
   t = {
     name = "Terminal",
-    n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-    u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
-    t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
-    p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
+    t = { "<cmd>ToggleTerm<cr>", "Tab" },
     f = { "<cmd>ToggleTerm direction=float<cr>" .. trn, "Float" },
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>" .. trn, "Vertical" },
