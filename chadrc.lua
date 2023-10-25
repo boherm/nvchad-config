@@ -10,6 +10,29 @@ M.ui = {
 
   hl_override = highlights.override,
   hl_add = highlights.add,
+
+  nvdash = {
+    load_on_startup = true,
+    header = {
+      "    __   __        ___  __           ",
+      "   |__) /  \\ |__| |__  |__)  |\\/|    ",
+      "   |__) \\__/ |  | |___ |  \\  |  |    ",
+      "                                      "
+    }
+  },
+
+  statusline = {
+    theme = 'default',
+    overriden_modules = function(modules)
+      table.insert(
+        modules,
+        11,
+        (function()
+          return "%#white# %{strftime('%H:%M')} "
+        end)()
+      )
+    end,
+  }
 }
 
 M.plugins = "custom.plugins"
