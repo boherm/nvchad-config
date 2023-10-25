@@ -6,7 +6,6 @@ local highlights = require "custom.highlights"
 
 M.ui = {
   theme = "github_dark",
-  theme_toggle = { "github_dark", "github_light" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,
@@ -17,7 +16,13 @@ M.ui = {
       "    __   __        ___  __           ",
       "   |__) /  \\ |__| |__  |__)  |\\/|    ",
       "   |__) \\__/ |  | |___ |  \\  |  |    ",
-      "                                      "
+      "                                 1.0 "
+    },
+    buttons = {
+      { "  Find File", "Spc f f", "Telescope find_files" },
+      { "󰈚  Recent Files", "Spc f o", "Telescope oldfiles" },
+      { "  Bookmarks", "Spc m a", "Telescope marks" },
+      { "  Mappings", "Spc c h", "NvCheatsheet" },
     }
   },
 
@@ -42,6 +47,7 @@ M.mappings = require "custom.mappings"
 
 -- Neovim config
 vim.opt.colorcolumn = "121"
+vim.g.toggle_theme_icon = ""
 
 -- Neovide config
 vim.g.neovide_cursor_antialiasing = true
