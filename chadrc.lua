@@ -40,6 +40,9 @@ M.plugins = "custom.plugins"
 -- check core.mappings for table structure
 M.mappings = require "custom.mappings"
 
+-- Neovim config
+vim.opt.colorcolumn = "121"
+
 -- Neovide config
 vim.g.neovide_cursor_antialiasing = true
 vim.g.neovide_cursor_trail_size = 0.5
