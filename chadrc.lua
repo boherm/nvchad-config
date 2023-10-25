@@ -20,6 +20,7 @@ M.ui = {
     },
     buttons = {
       { "  Find File", "Spc f f", "Telescope find_files" },
+      { "󰉋  Recent Projects", "Spc f p", "Telescope projects" },
       { "󰈚  Recent Files", "Spc f o", "Telescope oldfiles" },
       { "  Bookmarks", "Spc m a", "Telescope marks" },
       { "  Mappings", "Spc c h", "NvCheatsheet" },

@@ -102,8 +102,8 @@ local mappings = {
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["f"] = {
-    "<cmd>Telescope find_files <CR>",
-    "Find files",
+    { "<cmd>Telescope find_files <CR>", "Find files" },
+    p = { "<cmd>Telescope projects<CR>", "Recent Projects" },
   },
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   -- ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
@@ -128,7 +128,6 @@ local mappings = {
   -- 	S = { "<cmd>PackerStatus<cr>", "Status" },
   -- 	u = { "<cmd>PackerUpdate<cr>", "Update" },
   -- },
-
   g = {
     name = "Git",
     g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
